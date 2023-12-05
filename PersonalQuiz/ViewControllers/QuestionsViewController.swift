@@ -39,6 +39,7 @@ final class QuestionsViewController: UIViewController {
         let answersCount = Float(currentAnswers.count - 1)
         rangedSlider.maximumValue = answersCount
         rangedSlider.value = answersCount / 2
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

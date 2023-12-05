@@ -16,37 +16,31 @@ final class ResultViewController: UIViewController {
     var answersChosenForResults: [Answer] = []
    
     
-   /* init(labelOne: UILabel!, labelTwo: UILabel!, answersChosenForResults: [Answer]) {
-        self.labelOne = labelOne
-        self.labelTwo = labelTwo
-        self.answersChosenForResults = answersChosenForResults
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        mostFrequentAnimal(in: answersChosenForResults)
+        let mostFrequent = mostFrequentAnimal(in: answersChosenForResults)
         
-        labelOne.text = "Вы - \(String(describing: mostFrequentAnimal(in: answersChosenForResults)))"
-        //labelOne.text = "Вы - \(counts.)"
-        
+        labelOne.text = "Вы - \(mostFrequent.rawValue)"
+        labelTwo.text = mostFrequent.definition
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
-    func mostFrequentAnimal(in answersChosenForResults: [Answer]) -> Animal? {
+    func mostFrequentAnimal(in answersChosenForResults: [Answer]) -> Animal {
         let counts = answersChosenForResults.reduce(into: [:]) { counts, answer in
             counts[answer.animal, default: 0] += 1
+            
         }
+        print(counts)
         
         if let (mostFrequentAnimal, _) = counts.max(by: { $0.1 < $1.1 }) {
             return mostFrequentAnimal
         } else {
-            return nil
+            return .cat
         }
     }
+    
+    
+   
 
     
     @IBAction func doneButtonAction(_ sender: UIBarButtonItem) {
