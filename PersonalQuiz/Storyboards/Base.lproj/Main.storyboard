@@ -310,13 +310,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-3E-gQr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-3E-gQr">
                                         <rect key="frame" x="30.5" y="76" width="104" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165.5" id="Ohd-nd-7ki"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96.5" id="pr3-26-FhK"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lFv-P0-Mxs"/>
@@ -324,6 +328,7 @@
                         <constraints>
                             <constraint firstItem="Jse-5L-sv4" firstAttribute="centerY" secondItem="XnY-FU-3Wj" secondAttribute="centerY" id="FyM-Kt-e9K"/>
                             <constraint firstItem="Jse-5L-sv4" firstAttribute="centerX" secondItem="XnY-FU-3Wj" secondAttribute="centerX" id="Qfs-Db-dEY"/>
+                            <constraint firstItem="Jse-5L-sv4" firstAttribute="centerX" secondItem="lFv-P0-Mxs" secondAttribute="centerX" id="SjN-Oq-7bH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="3hA-p6-Lu7">
