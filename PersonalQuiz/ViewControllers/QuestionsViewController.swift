@@ -42,11 +42,12 @@ final class QuestionsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Передать массив с ответами на ResultViewController скорее всего надо использовать функцию zip
+        //Передать массив с ответами на ResultViewController
         guard let resultViewController = segue.destination as? ResultViewController else {
             return
         }
         resultViewController.answersChosenForResults = answersChosen
+       // print(answersChosen)
         
     }
 
