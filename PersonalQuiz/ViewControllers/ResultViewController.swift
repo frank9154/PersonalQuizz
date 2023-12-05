@@ -21,7 +21,7 @@ final class ResultViewController: UIViewController {
         let mostFrequent = mostFrequentAnimal(in: answersChosenForResults)
         
         labelOne.text = "Вы - \(mostFrequent.rawValue)"
-        labelTwo.text = mostFrequent.definition
+        labelTwo.text = "\(mostFrequent.definition)"
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
